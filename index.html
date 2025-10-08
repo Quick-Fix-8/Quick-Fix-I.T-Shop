@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick-Fix I.T Shop - Your Tech Solution</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <img src="./images/logo.png" alt="Quick-Fix Logo">
+          <span>Quick-Fix I.T Shop</span>
+        </div>
+        
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="admin.html" class="nav-link admin-btn">Admin</a></li>
+          <li class="cart-icon">
+            <a href="#cart" class="nav-link">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Your One-Stop Tech Solution</h1>
+      <p>Discover the latest gadgets, laptops, phones and accessories at unbeatable prices</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn btn-primary">Shop Now</a>
+        <a href="#services" class="btn btn-secondary">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="floating-card card-1">
+        <img src="images/cheapgaminglaptops-2048px-7981.jpg" alt="Laptop">
+        <span>Laptops</span>
+      </div>
+      <div class="floating-card card-2">
+        <img src="./images/phone.jpg" alt="Phone">
+        <span>Phones</span>
+      </div>
+      <div class="floating-card card-3">
+        <img src="./images/smartwatch.jpg" alt="Smartwatch">
+        <span>Watches</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-subtitle">Discover our curated collection of tech products</p>
+      
+      <!-- Product Controls -->
+      <div class="product-controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchBox" placeholder="Search products...">
+        </div>
+        
+        <div class="filter-controls">
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="laptop">Laptops</option>
+            <option value="phone">Phones</option>
+            <option value="watch">Watches</option>
+            <option value="earbuds">Accessories</option>
+          </select>
+          
+          <div class="price-filter">
+            <label for="priceRange">Max Price: <span id="priceValue">$1000</span></label>
+            <input type="range" id="priceRange" min="0" max="2000" step="50" value="1000">
+          </div>
+          
+          <div class="sort-section">
+            <select id="sortBy">
+              <option value="default">Sort By</option>
+              <option value="priceLow">Price: Low to High</option>
+              <option value="priceHigh">Price: High to Low</option>
+              <option value="nameAZ">Name: A-Z</option>
+              <option value="nameZA">Name: Z-A</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Products will be loaded dynamically -->
+      </div>
+      
+      <div class="load-more">
+        <button class="btn btn-outline" id="loadMore">Load More Products</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Beyond just selling products, we provide complete tech solutions</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Device Repair</h3>
+          <p>Fast and reliable repair services for all your gadgets with warranty</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Tech Support</h3>
+          <p>24/7 technical support to help you with any device issues</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Data Security</h3>
+          <p>Protect your data with our security solutions and backup services</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Free delivery on orders above $200 with same-day shipping available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">About Quick-Fix I.T Shop</h2>
+          <p>We are your trusted partner for all technology needs. With over 10 years of experience, we've been providing cutting-edge gadgets and reliable tech solutions to thousands of satisfied customers.</p>
+          
+          <div class="stats">
+            <div class="stat">
+              <h3>5000+</h3>
+              <p>Happy Customers</p>
+            </div>
+            <div class="stat">
+              <h3>10+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat">
+              <h3>24/7</h3>
+              <p>Customer Support</p>
+            </div>
+          </div>
+          
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+        
+        <div class="about-image">
+          <img src="./images/about.jpg" alt="Our Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Have questions? We're here to help!</p>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Visit Us</h3>
+              <p>123 Tech Street, Digital City</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>support@quickfix.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h3>Opening Hours</h3>
+              <p>Mon - Sat: 9AM - 8PM</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Subject">
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="logo">
+            <img src="./images/logo.png" alt="Quick-Fix Logo">
+            <span>Quick-Fix I.T Shop</span>
+          </div>
+          <p>Your trusted partner for technology solutions and gadgets.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Smart Watches</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Gaming</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new products and offers</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email">
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Quick-Fix I.T Shop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Sidebar -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="closeCart">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be added here -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary btn-block">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification" id="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
